@@ -1,406 +1,295 @@
-<link
-  href="/resources/website/bower_components/bootstrap/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-/>
+<link href="/resources/website/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
 <!-- Font Awesome Css -->
-<link
-  href="/resources/website/bower_components/font-awesome/css/font-awesome.min.css"
-  rel="stylesheet"
-/>
+<link href="/resources/website/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
 <!-- Custom styles for this template -->
-<link
-  href="/resources/website/assets/css/style.css"
-  rel="stylesheet"
-  type="text/css"
-/>
-<link
-  href="/resources/website/assets/css/easing.min.css"
-  rel="stylesheet"
-  type="text/css"
-/>
-<link
-  href="/resources/website/assets/css/scrollToTop.min.css"
-  rel="stylesheet"
-  type="text/css"
-/>
-<link
-  href="/resources/website/assets/css/jquery.incremental-counter.css"
-  rel="stylesheet"
-  type="text/css"
-/>
-<link
-  href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"
-  rel="stylesheet"
-  type="text/css"
-/>
-<link
-  href="/resources/website/assets/css/tooltipster.bundle.min.css"
-  rel="stylesheet"
-  type="text/css"
-/>
+<link href="/resources/website/assets/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/website/assets/css/easing.min.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/website/assets/css/scrollToTop.min.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/website/assets/css/jquery.incremental-counter.css" rel="stylesheet" type="text/css"/>
+<link href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/website/assets/css/tooltipster.bundle.min.css" rel="stylesheet" type="text/css"/>
 <style>
-  .print-only {
-    display: none;
-  }
-
-  body {
-    padding-left: 10px !important;
-  }
-
-  @media print {
-    .no-print {
-      display: none;
+ .print-only {
+        display: none;
     }
+ body
+ {
+     padding-left: 10px !important;
+ }
+    @media print {
+        .no-print {
+            display: none;
+        }
 
-    .print-only {
-      display: block;
-    }
+        .print-only {
+            display: block;
+        }
 
     /*    @page {
-
             size: auto;   !* auto is the initial value *!
-
             margin: 1px ;  !* this affects the margin in the printer settings *!
-
         }*/
+        @page {
+            /*size: 297mm 210mm;*/ /* landscape */
+            /* you can also specify margins here: */
+            size: auto;
+            margin: 5mm;
+            margin-bottom: 40px;
+            counter-increment: page;
+        }
+        .text-had
+        {
+            padding-top: 8px!important;
+        }
+        .txt-details,.text-had
+        {
+           line-height: 8.5mm;
+        }
+        .bg-act-section
+        {
+            padding-top: 35px!important;
+        }
 
-    @page {
-      /*size: 297mm 210mm;*/ /* landscape */
-
-      /* you can also specify margins here: */
-
-      size: auto;
-
-      margin: 5mm;
-
-      margin-bottom: 40px;
-
-      counter-increment: page;
     }
-
-    .text-had {
-      padding-top: 8px !important;
-    }
-
-    .txt-details,
-    .text-had {
-      line-height: 8.5mm;
-    }
-
-    .bg-act-section {
-      padding-top: 35px !important;
-    }
-  }
 </style>
-<div
-  class="no-print pull-right"
-  onclick="window.print();return false;"
-  style="
-    width: 72px;
-    height: 80px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    cursor: pointer;
-  "
->
-  <img
-    src="/resources/website/assets/img/printer.jpg"
-    style="widht: 80px; height: 70px"
-  />
-  <p style="color: #ff3399">প্রিন্ট</p>
+<div class="no-print pull-right" onclick="window.print();return false;" style="width: 72px;height: 80px;margin-top: 5px;margin-bottom: 5px;cursor: pointer;">
+ <img src="/resources/website/assets/img/printer.jpg" style="widht:80px; height:70px;"/>
+ <p style="color:#FF3399;">
+  প্রিন্ট
+ </p>
 </div>
 <div id="printh">
-  <div id="date">11/11/2025</div>
-  <div id="printheader">
-    রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা (সংশোধন) অধ্যাদেশ, ২০২৫
-  </div>
+ <div id="date">
+  29/03/2026
+ </div>
+ <div id="printheader">
+  রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা (সংশোধন) অধ্যাদেশ, ২০২৫
+ </div>
 </div>
-<div
-  class="col-md-11 hide-bod boxed-layout"
-  id="hide"
-  style="padding: 10px; width: 94%"
->
-  <section class="bg-act-section padding-bottom-20">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lineremove">
-        <div class="text-center">
-          <h3>রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা (সংশোধন) অধ্যাদেশ, ২০২৫</h3>
-          <h4 style="color: #fff">( ২০২৫ সনের ৪৬ নং অধ্যাদেশ )</h4>
-        </div>
-      </div>
+<div class="col-md-11 hide-bod boxed-layout" id="hide" style="padding: 10px;width: 94%;">
+ <section class="bg-act-section padding-bottom-20">
+  <div class="row">
+   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lineremove">
+    <div class="text-center">
+     <h3>
+      রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা (সংশোধন) অধ্যাদেশ, ২০২৫
+     </h3>
+     <h4 style="color: #fff;">
+      (
+                                
+                                    
+
+                                        ২০২৫ সনের ৪৬ নং
+                                        
+                                            অধ্যাদেশ
+                                            
+                                        
+
+                                    
+                                    
+                                
+
+                                )
+     </h4>
     </div>
-  </section>
-  <section class="bt-act-section-search">
-    <div class="row">
-      <div class="col-xs-12 col-sm-bottom12 col-md-12 col-lg-12">
-        <p class="pull-left no-print">
-          <a href="/act-details-1559.html">
-            <i aria-hidden="true" class="fa fa-arrow-left" title="Back"> </i>
-          </a>
-        </p>
-        <p class="pull-right publish-date">[ ১ সেপ্টেম্বর, ২০২৫ ]</p>
-      </div>
+   </div>
+  </div>
+ </section>
+ <section class="bt-act-section-search">
+  <div class="row">
+   <div class="col-xs-12 col-sm-bottom12 col-md-12 col-lg-12">
+    <p class="pull-left no-print">
+     <a href="/act-details-1559.html">
+      <i aria-hidden="true" class="fa fa-arrow-left" title="Back">
+      </i>
+     </a>
+    </p>
+    <p class="pull-right publish-date">
+     [ ১ সেপ্টেম্বর, ২০২৫   ]
+    </p>
+   </div>
+  </div>
+ </section>
+ <section class="padding-bottom-20">
+  <div class="row margin-top-20">
+   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="row lineremove">
+     <div class="text-center act-role-style">
+      <strong>
+       <p style="text-align:center">
+        <a href="/act-1537.html" title="রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫">
+         রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫
+        </a>
+        সংশোধনকল্পে প্রণীত
+       </p>
+       <p style="text-align:center">
+        অধ্যাদেশ
+       </p>
+      </strong>
+     </div>
     </div>
-  </section>
-  <section class="padding-bottom-20">
-    <div class="row margin-top-20">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="row lineremove">
-          <div class="text-center act-role-style">
-            <strong>
-              <p style="text-align: center">
-                <a
-                  href="/act-1537.html"
-                  title="রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫"
-                >
-                  রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫
-                </a>
-                সংশোধনকল্পে প্রণীত
-              </p>
-              <p style="text-align: center">অধ্যাদেশ</p>
-            </strong>
-          </div>
-        </div>
-        <div class="row lineremove">
-          <div class="col-md-12">
-            <div class="col-md-12 pad-right">
-              <p style="text-align: justify">
-                যেহেতু নিম্নবর্ণিত উদ্দেশ্যসমূহ পূরণকল্পে
-                <a
-                  href="/act-1537.html"
-                  title="রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫"
-                >
-                  রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫
-                </a>
-                (২০২৫ সনের ২৪ নং অধ্যাদেশ) এর সংশোধন করা সমীচীন ও প্রয়োজনীয়; এবং
-              </p>
-              <p style="text-align: justify">
-                যেহেতু সংসদ ভাঙ্গিয়া যাওয়া অবস্থায় রহিয়াছে এবং রাষ্ট্রপতির নিকট
-                ইহা সন্তোষজনকভাবে প্রতীয়মান হইয়াছে যে, আশু ব্যবস্থা গ্রহণের জন্য
-                প্রয়োজনীয় পরিস্থিতি বিদ্যমান রহিয়াছে;
-              </p>
-              <p style="text-align: justify">
-                সেহেতু
-                <a
-                  href="/act-957.html"
-                  title="গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান"
-                >
-                  গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান
-                </a>
-                ের ৯৩(১) অনুচ্ছেদে প্রদত্ত ক্ষমতাবলে রাষ্ট্রপতি নিম্নরূপ
-                অধ্যাদেশ প্রণয়ন ও জারি করিলেন, যথা:-
-              </p>
-            </div>
-          </div>
-        </div>
+    <div class="row lineremove">
+     <div class="col-md-12">
+      <div class="col-md-12 pad-right">
+       <p style="text-align:justify">
+        যেহেতু নিম্নবর্ণিত উদ্দেশ্যসমূহ পূরণকল্পে
+        <a href="/act-1537.html" title="রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫">
+         রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫
+        </a>
+        (২০২৫ সনের ২৪ নং অধ্যাদেশ) এর সংশোধন করা সমীচীন ও প্রয়োজনীয়; এবং
+       </p>
+       <p style="text-align:justify">
+        যেহেতু সংসদ ভাঙ্গিয়া যাওয়া অবস্থায় রহিয়াছে এবং রাষ্ট্রপতির নিকট ইহা সন্তোষজনকভাবে প্রতীয়মান হইয়াছে যে, আশু ব্যবস্থা গ্রহণের জন্য প্রয়োজনীয় পরিস্থিতি বিদ্যমান রহিয়াছে;
+       </p>
+       <p style="text-align:justify">
+        সেহেতু
+        <a href="/act-957.html" title="গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান">
+         গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধান
+        </a>
+        ের ৯৩(১) অনুচ্ছেদে প্রদত্ত ক্ষমতাবলে রাষ্ট্রপতি নিম্নরূপ অধ্যাদেশ প্রণয়ন ও জারি করিলেন, যথা:-
+       </p>
       </div>
+     </div>
     </div>
-  </section>
-  <section class="padding-bottom-20 bg-striped">
-    <div class="row lineremoves">
-      <div class="col-sm-3 txt-head" style="width: 18%; float: left">
-        সংক্ষিপ্ত শিরোনাম ও প্রবর্তন
-      </div>
-      <div
-        class="col-sm-9 txt-details"
-        id="sec-dec"
-        style="text-align: justify; width: 82%; float: right"
-      >
-        <p style="text-align: justify">
-          ১। (১) এই অধ্যাদেশ
-          <a
-            href="/act-1559.html"
-            title="রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা (সংশোধন) অধ্যাদেশ, ২০২৫"
-          >
-            রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা (সংশোধন) অধ্যাদেশ, ২০২৫
-          </a>
-          নামে অভিহিত হইবে।
-        </p>
-        <p style="text-align: justify">
-          (২) যেই তারিখে
-          <a
-            href="/act-1537.html"
-            title="রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫"
-          >
-            রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫
-          </a>
-          (২০২৫ সনের ২৪ নং অধ্যাদেশ) কার্যকর হইবে সেই তারিখে এই অধ্যাদেশ কার্যকর
-          হইবে।
-        </p>
-      </div>
-    </div>
-    <div class="row lineremoves">
-      <div class="col-sm-3 txt-head" style="width: 18%; float: left">
-        ২০২৫ সনের ২৪ নং অধ্যাদেশের ধারা ৪ এর সংশোধন
-      </div>
-      <div
-        class="col-sm-9 txt-details"
-        id="sec-dec"
-        style="text-align: justify; width: 82%; float: right"
-      >
-        <p style="text-align: justify">
-          ২।
-          <a
-            href="/act-1537.html"
-            title="রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫"
-          >
-            রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫
-          </a>
-          (২০২৫ সনের ২৪ নং অধ্যাদেশ), অতঃপর উক্ত অধ্যাদেশ বলিয়া উল্লিখিত, এর
-          ধারা ৪ এর-
-        </p>
-        <p style="text-align: justify">
-          (ক) উপ-ধারা (৩) এর পরিবর্তে নিম্নরূপ উপ-ধারা (৩) প্রতিস্থাপিত হইবে,
-          যথা:-
-        </p>
-        <p style="text-align: justify">
-          “(৩) সরকার সামস্টিক অর্থনীতি, বাণিজ্য নীতি, পরিকল্পনা, রাজস্ব নীতি বা
-          রাজস্ব ব্যবস্থাপনা কাজে অভিজ্ঞতাসম্পন্ন কোনো সরকারি কর্মকতাকে রাজস্ব
-          নীতি বিভাগের সচিব পদে নিয়োগ প্রদান করিবে।”;
-        </p>
-        <p style="text-align: justify">
-          (খ) উপ-ধারা (৪) এর পরিবর্তে নিম্নরূপ উপ-ধারা (৪) প্রতিস্থাপিত হইবে,
-          যথা:-
-        </p>
-        <p style="text-align: justify">
-          “(৪) রাজস্ব নীতি বিভাগের আয়কর নীতি, দ্বৈতকর পরিহার চুক্তি, আন্তর্জাতিক
-          চুক্তি ও মতামত, শুল্ক নীতি, মূল্য সংযোজন কর নীতি, আন্তর্জাতিক বাণিজ্য
-          ও কাস্টমস সংক্রান্ত চুক্তি অনুবিভাগের বিভিন্ন পদ রাজস্ব আহরণ সংক্রান্ত
-          কাজে অভিজ্ঞতাসম্পন্ন কর্মকর্তাগণের মধ্য হইতে পূরণযোগ্য হইবে।”;
-        </p>
-        <p style="text-align: justify">
-          (গ) উপ-ধারা (৪) এর পর নিম্নরূপ নূতন উপ-ধারা (৪ক) সন্নিবেশিত হইবে,
-          যথা:-
-        </p>
-        <p style="text-align: justify">
-          “(৪ক) রাজস্ব নীতি বিভাগের অন্যান্য অনুবিভাগসমূহের পদসমূহ জনপ্রশাসন,
-          অর্থনীতি, বাণিজ্য নীতি, গবেষণা ও পরিসংখ্যান, হিসাব ও নিরীক্ষা, তথ্য
-          প্রযুক্তির প্রয়োগ এবং আইন প্রণয়ন সংক্রান্ত কাজে অভিজ্ঞতাসম্পন্ন
-          কর্মকর্তা বা ব্যক্তিবর্গ হইতে পূরণযোগ্য হইবে।”।
-        </p>
-      </div>
-    </div>
-    <div class="row lineremoves">
-      <div class="col-sm-3 txt-head" style="width: 18%; float: left">
-        ২০২৫ সনের ২৪ নং অধ্যাদেশের ধারা ৫ এর সংশোধন
-      </div>
-      <div
-        class="col-sm-9 txt-details"
-        id="sec-dec"
-        style="text-align: justify; width: 82%; float: right"
-      >
-        <p style="text-align: justify">
-          ৩। উক্ত অধ্যাদেশের ধারা ৫ এর দফা (চ) এর পরিবর্তে নিম্নরূপ দফা (চ)
-          প্রতিস্থাপিত হইবে, যথা:-
-        </p>
-        <p style="text-align: justify">
-          “(চ) রাজস্ব নীতি, কর ব্যয় ও রাজস্ব আহরণ পরিস্থিতির প্রভাব বিশ্লেষণ
-          (impact analysis);”।
-        </p>
-      </div>
-    </div>
-    <div class="row lineremoves">
-      <div class="col-sm-3 txt-head" style="width: 18%; float: left">
-        ২০২৫ সনের ২৪ নং অধ্যাদেশের ধারা ৭ এর সংশোধন
-      </div>
-      <div
-        class="col-sm-9 txt-details"
-        id="sec-dec"
-        style="text-align: justify; width: 82%; float: right"
-      >
-        <p style="text-align: justify">৪। উক্ত অধ্যাদেশের ধারা ৭ এর-</p>
-        <p style="text-align: justify">
-          (ক) উপ-ধারা (৩) এ উল্লিখিত “নিয়োগের ক্ষেত্রে অগ্রাধিকার” শব্দগুলির
-          পরিবর্তে “নিয়োগ” শব্দ প্রতিস্থাপিত হইবে;
-        </p>
-        <p style="text-align: justify">
-          (খ) উপ-ধারা (৪), (৫) ও (৬) এর পরিবর্তে নিম্নরূপ উপ-ধারা (৪), (৫) ও (৬)
-          প্রতিস্থাপিত হইবে, যথা:-
-        </p>
-        <p style="text-align: justify">
-          “(৪) রাজস্ব ব্যবস্থাপনা বিভাগের আয়কর, মূল্য সংযোজন কর, কাস্টমস আইন
-          বাস্তবায়ন এবং মাঠ পর্যায়ের মানব সম্পদ ব্যবস্থাপনা সংশ্লিষ্ট অনুবিভাগের
-          বিভিন্ন পদ রাজস্ব আহরণ সংক্রান্ত কাজে অভিজ্ঞতাসম্পন্ন কর্মকর্তাগণের
-          মধ্য হইতে পূরণযোগ্য হইবে।
-        </p>
-        <p style="text-align: justify">
-          (৫) রাজস্ব ব্যবস্থাপনা বিভাগের প্রশাসনিক অনুবিভাগের বিভিন্ন পদসমূহ
-          রাজস্ব আহরণ ও জনপ্রশাসন সংক্রান্ত কাজে অভিজ্ঞতাসম্পন্ন কর্মকর্তাগণের
-          মধ্য হইতে পূরণযোগ্য হইবে।
-        </p>
-        <p style="text-align: justify">
-          (৬) রাজস্ব ব্যবস্থাপনা বিভাগ কর্তৃক তফসিলে বর্ণিত আইনসমূহ বাস্তবায়ন
-          সংশ্লিষ্ট মাঠ পর্যায়ের পদসমূহ রাজস্ব আহরণ সংক্রান্ত কাজে
-          অভিজ্ঞতাসম্পন্ন কর্মকর্তাগণ এবং রাজস্ব ব্যবস্থাপনা বিভাগের মাঠ পর্যায়ে
-          কর্মরত কর্মচারীগণ হইতে পূরণযোগ্য হইবে।”।
-        </p>
-      </div>
-    </div>
-    <div class="row lineremoves">
-      <div class="col-sm-3 txt-head" style="width: 18%; float: left">
-        ২০২৫ সনের ২৪ নং অধ্যাদেশের ধারা ৮ এর সংশোধন
-      </div>
-      <div
-        class="col-sm-9 txt-details"
-        id="sec-dec"
-        style="text-align: justify; width: 82%; float: right"
-      >
-        <p style="text-align: justify">৫। উক্ত অধ্যাদেশের ধারা ৮ এর-</p>
-        <p style="text-align: justify">
-          (ক) দফা (জ) এর পরিবর্তে নিম্নরূপ দফা (জ) প্রতিস্থাপিত হইবে, যথা:-
-        </p>
-        <p style="text-align: justify">
-          “(জ) রাজস্ব ব্যবস্থাপনা সংশ্লিষ্ট বিধি-বিধান, প্রজ্ঞাপন, রুলিং,
-          নীতিমালা, স্থায়ী আদেশ ও অন্যান্য নির্দেশাবলী প্রণয়ন, সংশোধন ও উহাদের
-          ব্যাখ্যা প্রদান;”;
-        </p>
-        <p style="text-align: justify">
-          (খ) দফা (ট) এর পরিবর্তে নিম্নরূপ দফা (ট) প্রতিস্থাপিত হইবে, যথা:-
-        </p>
-        <p style="text-align: justify">
-          “(ট) রাজস্ব ব্যবস্থাপনা বিভাগের অটোমেশন কার্যক্রম দ্রুত বাস্তবায়ন এবং
-          আন্তঃউইং ও রাজস্ব নীতি বিভাগসহ সংশ্লিষ্ট সকল দপ্তরের মধ্যে আন্তঃসংযোগ
-          প্রতিষ্ঠা;”।
-        </p>
-      </div>
-    </div>
-    <hr />
-    <div>
-      <img src="/resources/website/assets/img/line2.jpg" />
-    </div>
-    <div class="footnoteListAll">
-      <ul class="list-unstyled"></ul>
-    </div>
-  </section>
-  <section class="copy-right text-center">
-    <div>
-      <img
-        height="18"
-        src="/resources/website/assets/img/line.jpg"
-        width="100"
-      />
-    </div>
-    <div
-      style="
-        color: #cc9966;
-        font-size: 14px;
-        font-style: normal;
-        line-height: 9mm;
-      "
-    >
-      Copyright
-      <span style="color: black"> © </span>
-      2019, Legislative and Parliamentary Affairs Division
-    </div>
-    <div
-      style="
-        color: #cc9966;
-        font-size: 14px;
-        font-style: normal;
-        line-height: 9mm;
-      "
-    >
-      Ministry of Law, Justice and Parliamentary Affairs
-    </div>
-  </section>
+   </div>
+  </div>
+ </section>
+ <section class="padding-bottom-20 bg-striped">
+  <div class="row lineremoves">
+   <div class="col-sm-3 txt-head" style="width: 18%;float: left;">
+    সংক্ষিপ্ত শিরোনাম ও প্রবর্তন
+   </div>
+   <div class="col-sm-9 txt-details" id="sec-dec" style="text-align: justify;width: 82%; float:right">
+    <p style="text-align:justify">
+     ১। (১) এই অধ্যাদেশ
+     <a href="/act-1559.html" title="রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা (সংশোধন) অধ্যাদেশ, ২০২৫">
+      রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা (সংশোধন) অধ্যাদেশ, ২০২৫
+     </a>
+     নামে অভিহিত হইবে।
+    </p>
+    <p style="text-align:justify">
+     (২) যেই তারিখে
+     <a href="/act-1537.html" title="রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫">
+      রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫
+     </a>
+     (২০২৫ সনের ২৪ নং অধ্যাদেশ) কার্যকর হইবে সেই তারিখে এই অধ্যাদেশ কার্যকর হইবে।
+    </p>
+   </div>
+  </div>
+  <div class="row lineremoves">
+   <div class="col-sm-3 txt-head" style="width: 18%;float: left;">
+    ২০২৫ সনের ২৪ নং অধ্যাদেশের ধারা ৪ এর সংশোধন
+   </div>
+   <div class="col-sm-9 txt-details" id="sec-dec" style="text-align: justify;width: 82%; float:right">
+    <p style="text-align:justify">
+     ২।
+     <a href="/act-1537.html" title="রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫">
+      রাজস্ব নীতি ও রাজস্ব ব্যবস্থাপনা অধ্যাদেশ, ২০২৫
+     </a>
+     (২০২৫ সনের ২৪ নং অধ্যাদেশ), অতঃপর উক্ত অধ্যাদেশ বলিয়া উল্লিখিত, এর ধারা ৪ এর-
+    </p>
+    <p style="text-align:justify">
+     (ক) উপ-ধারা (৩) এর পরিবর্তে নিম্নরূপ উপ-ধারা (৩) প্রতিস্থাপিত হইবে, যথা:-
+    </p>
+    <p style="text-align:justify">
+     “(৩) সরকার সামস্টিক অর্থনীতি, বাণিজ্য নীতি, পরিকল্পনা, রাজস্ব নীতি বা রাজস্ব ব্যবস্থাপনা কাজে অভিজ্ঞতাসম্পন্ন কোনো সরকারি কর্মকতাকে রাজস্ব নীতি বিভাগের সচিব পদে নিয়োগ প্রদান করিবে।”;
+    </p>
+    <p style="text-align:justify">
+     (খ) উপ-ধারা (৪) এর পরিবর্তে নিম্নরূপ উপ-ধারা (৪) প্রতিস্থাপিত হইবে, যথা:-
+    </p>
+    <p style="text-align:justify">
+     “(৪) রাজস্ব নীতি বিভাগের আয়কর নীতি, দ্বৈতকর পরিহার চুক্তি, আন্তর্জাতিক চুক্তি ও মতামত, শুল্ক নীতি, মূল্য সংযোজন কর নীতি, আন্তর্জাতিক বাণিজ্য ও কাস্টমস সংক্রান্ত চুক্তি অনুবিভাগের বিভিন্ন পদ রাজস্ব আহরণ সংক্রান্ত কাজে অভিজ্ঞতাসম্পন্ন কর্মকর্তাগণের মধ্য হইতে পূরণযোগ্য হইবে।”;
+    </p>
+    <p style="text-align:justify">
+     (গ) উপ-ধারা (৪) এর পর নিম্নরূপ নূতন উপ-ধারা (৪ক) সন্নিবেশিত হইবে, যথা:-
+    </p>
+    <p style="text-align:justify">
+     “(৪ক) রাজস্ব নীতি বিভাগের অন্যান্য অনুবিভাগসমূহের পদসমূহ জনপ্রশাসন, অর্থনীতি, বাণিজ্য নীতি, গবেষণা ও পরিসংখ্যান, হিসাব ও নিরীক্ষা, তথ্য প্রযুক্তির প্রয়োগ এবং আইন প্রণয়ন সংক্রান্ত কাজে অভিজ্ঞতাসম্পন্ন কর্মকর্তা বা ব্যক্তিবর্গ হইতে পূরণযোগ্য হইবে।”।
+    </p>
+   </div>
+  </div>
+  <div class="row lineremoves">
+   <div class="col-sm-3 txt-head" style="width: 18%;float: left;">
+    ২০২৫ সনের ২৪ নং অধ্যাদেশের ধারা ৫ এর সংশোধন
+   </div>
+   <div class="col-sm-9 txt-details" id="sec-dec" style="text-align: justify;width: 82%; float:right">
+    <p style="text-align:justify">
+     ৩। উক্ত অধ্যাদেশের ধারা ৫ এর দফা (চ) এর পরিবর্তে নিম্নরূপ দফা (চ) প্রতিস্থাপিত হইবে, যথা:-
+    </p>
+    <p style="text-align:justify">
+     “(চ) রাজস্ব নীতি, কর ব্যয় ও রাজস্ব আহরণ পরিস্থিতির প্রভাব বিশ্লেষণ (impact analysis);”।
+    </p>
+   </div>
+  </div>
+  <div class="row lineremoves">
+   <div class="col-sm-3 txt-head" style="width: 18%;float: left;">
+    ২০২৫ সনের ২৪ নং অধ্যাদেশের ধারা ৭ এর সংশোধন
+   </div>
+   <div class="col-sm-9 txt-details" id="sec-dec" style="text-align: justify;width: 82%; float:right">
+    <p style="text-align:justify">
+     ৪। উক্ত অধ্যাদেশের ধারা ৭ এর-
+    </p>
+    <p style="text-align:justify">
+     (ক) উপ-ধারা (৩) এ উল্লিখিত “নিয়োগের ক্ষেত্রে অগ্রাধিকার” শব্দগুলির পরিবর্তে “নিয়োগ” শব্দ প্রতিস্থাপিত হইবে;
+    </p>
+    <p style="text-align:justify">
+     (খ) উপ-ধারা (৪), (৫) ও (৬) এর পরিবর্তে নিম্নরূপ উপ-ধারা (৪), (৫) ও (৬) প্রতিস্থাপিত হইবে, যথা:-
+    </p>
+    <p style="text-align:justify">
+     “(৪) রাজস্ব ব্যবস্থাপনা বিভাগের আয়কর, মূল্য সংযোজন কর, কাস্টমস আইন বাস্তবায়ন এবং মাঠ পর্যায়ের মানব সম্পদ ব্যবস্থাপনা সংশ্লিষ্ট অনুবিভাগের বিভিন্ন পদ রাজস্ব আহরণ সংক্রান্ত কাজে অভিজ্ঞতাসম্পন্ন কর্মকর্তাগণের মধ্য হইতে পূরণযোগ্য হইবে।
+    </p>
+    <p style="text-align:justify">
+     (৫) রাজস্ব ব্যবস্থাপনা বিভাগের প্রশাসনিক অনুবিভাগের বিভিন্ন পদসমূহ রাজস্ব আহরণ ও জনপ্রশাসন সংক্রান্ত কাজে অভিজ্ঞতাসম্পন্ন কর্মকর্তাগণের মধ্য হইতে পূরণযোগ্য হইবে।
+    </p>
+    <p style="text-align:justify">
+     (৬) রাজস্ব ব্যবস্থাপনা বিভাগ কর্তৃক তফসিলে বর্ণিত আইনসমূহ বাস্তবায়ন সংশ্লিষ্ট মাঠ পর্যায়ের পদসমূহ রাজস্ব আহরণ সংক্রান্ত কাজে অভিজ্ঞতাসম্পন্ন কর্মকর্তাগণ এবং রাজস্ব ব্যবস্থাপনা বিভাগের মাঠ পর্যায়ে কর্মরত কর্মচারীগণ হইতে পূরণযোগ্য হইবে।”।
+    </p>
+   </div>
+  </div>
+  <div class="row lineremoves">
+   <div class="col-sm-3 txt-head" style="width: 18%;float: left;">
+    ২০২৫ সনের ২৪ নং অধ্যাদেশের ধারা ৮ এর সংশোধন
+   </div>
+   <div class="col-sm-9 txt-details" id="sec-dec" style="text-align: justify;width: 82%; float:right">
+    <p style="text-align:justify">
+     ৫। উক্ত অধ্যাদেশের ধারা ৮ এর-
+    </p>
+    <p style="text-align:justify">
+     (ক) দফা (জ) এর পরিবর্তে নিম্নরূপ দফা (জ) প্রতিস্থাপিত হইবে, যথা:-
+    </p>
+    <p style="text-align:justify">
+     “(জ) রাজস্ব ব্যবস্থাপনা সংশ্লিষ্ট বিধি-বিধান, প্রজ্ঞাপন, রুলিং, নীতিমালা, স্থায়ী আদেশ ও অন্যান্য নির্দেশাবলী প্রণয়ন, সংশোধন ও উহাদের ব্যাখ্যা প্রদান;”;
+    </p>
+    <p style="text-align:justify">
+     (খ) দফা (ট) এর পরিবর্তে নিম্নরূপ দফা (ট) প্রতিস্থাপিত হইবে, যথা:-
+    </p>
+    <p style="text-align:justify">
+     “(ট) রাজস্ব ব্যবস্থাপনা বিভাগের অটোমেশন কার্যক্রম দ্রুত বাস্তবায়ন এবং আন্তঃউইং ও রাজস্ব নীতি বিভাগসহ সংশ্লিষ্ট সকল দপ্তরের মধ্যে আন্তঃসংযোগ প্রতিষ্ঠা;”।
+    </p>
+   </div>
+  </div>
+  <hr/>
+  <div>
+   <img src="/resources/website/assets/img/line2.jpg"/>
+  </div>
+  <div class="footnoteListAll">
+   <ul class="list-unstyled">
+   </ul>
+  </div>
+ </section>
+ <section class="copy-right text-center">
+  <div>
+   <img height="18" src="/resources/website/assets/img/line.jpg" width="100"/>
+  </div>
+  <div style="color:#CC9966; font-size: 14px;font-style: normal;line-height: 9mm;">
+   Copyright
+   <span style="color: black">
+    ©
+   </span>
+   2019, Legislative and Parliamentary Affairs Division
+  </div>
+  <div style="color:#CC9966; font-size: 14px;font-style: normal;line-height: 9mm;">
+   Ministry of Law, Justice and Parliamentary Affairs
+  </div>
+ </section>
 </div>
