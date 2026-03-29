@@ -1,8 +1,8 @@
 {
   "metadata": {
     "source_url": "http://bdlaws.minlaw.gov.bd/laws-of-bangladesh.html",
-    "fetched_date": "2025-11-11T17:10:55.841008",
-    "total_volumes": 56
+    "fetched_date": "2026-03-29T12:13:36.387350",
+    "total_volumes": 57
   },
   "volumes": [
     {
@@ -282,8 +282,13 @@
     },
     {
       "volume_number": "56",
-      "description": "২০২৫ সনের ০১ নং অধ্যাদেশ হইতে ৫৬ নং অধ্যাদেশ",
+      "description": "২০২৫ সনের ০১ নং অধ্যাদেশ হইতে  ৮০ নং অধ্যাদেশ",
       "url": "http://bdlaws.minlaw.gov.bd/volume-56.html"
+    },
+    {
+      "volume_number": "57",
+      "description": "২০২৬ সনের ০১ নং অধ্যাদেশ হইতে ৩৬  নং অধ্যাদেশ",
+      "url": "http://bdlaws.minlaw.gov.bd/volume-57.html"
     }
   ]
 }
