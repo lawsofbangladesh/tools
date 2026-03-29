@@ -1,0 +1,34 @@
+name: "Step 6: Update Docs, List and Years Index"
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-docs-index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Update docs.json, list.mdx and years.mdx with latest acts
+        run: python update_docs_index.py --verbose
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add files/index/docs.json files/index/list.mdx files/index/years.mdx
+          git diff --staged --quiet || git commit -m "chore: update docs, list and years index files [skip ci]"
+          git push

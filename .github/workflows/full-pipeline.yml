@@ -42,6 +42,10 @@ jobs:
       - name: "Phase 4 – Update volume and year index files"
         run: python update_indexes.py --verbose
 
+      # Phase 5: Update Docs, List and Years Index
+      - name: "Phase 5 – Update docs.json, list.mdx and years.mdx"
+        run: python update_docs_index.py --verbose
+
       - name: Commit and push all results
         run: |
           git config user.name "github-actions[bot]"
