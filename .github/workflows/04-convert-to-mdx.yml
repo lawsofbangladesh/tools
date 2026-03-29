@@ -1,0 +1,35 @@
+name: "Step 4: Convert HTMLs to MDX"
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  convert-to-mdx:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Convert all HTMLs to MDX format
+        run: python convert_all_laws.py --verbose
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add files/md_output/
+          git diff --staged --quiet || git commit -m "chore: update converted MDX files [skip ci]"
+          git push

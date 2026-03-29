@@ -1,0 +1,51 @@
+name: "Full Pipeline: Fetch, Download & Convert All Laws"
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  full-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 480
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Phase 1: Fetch & Prepare Data
+      - name: "Phase 1a – Fetch volume list from source"
+        run: python scripts/fetch_volume_list.py
+
+      - name: "Phase 1b – Extract act metadata into CSV files"
+        run: python scripts/extract_acts_from_volumes.py
+
+      # Phase 2: Download HTMLs
+      - name: "Phase 2 – Download all act HTML files"
+        run: python scripts/download_act_htmls.py
+
+      # Phase 3: Convert to MDX
+      - name: "Phase 3 – Convert all HTMLs to MDX format"
+        run: python convert_all_laws.py --verbose
+
+      # Phase 4: Update Indexes
+      - name: "Phase 4 – Update volume and year index files"
+        run: python update_indexes.py --verbose
+
+      - name: Commit and push all results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add files/
+          git diff --staged --quiet || git commit -m "chore: full pipeline update [skip ci]"
+          git push
